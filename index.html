@@ -4,29 +4,37 @@
   const CONFIG = {
     categories: [
       { name: "Work", commands: [
-        { key: 'g', name: 'GitHub', url: 'https://github.com', search: '/search?q={}' },
-        { key: 'm', name: 'Inbox', url: 'https://inbox.google.com', search: '/search/{}' },
+        // { key: 'g', name: 'GitHub', url: 'https://github.com', search: '/search?q={}' },
+        { key: 'g', name: 'GitHub', url: 'https://github.com/mschlesk', search: '/search?q={}' },
+        { key: 'i0', name: 'Inbox 0', url: 'https://inbox.google.com/u/0', search: '/search/{}' },
+        { key: 'i1', name: 'Inbox 1', url: 'https://inbox.google.com/u/1', search: '/search/{}' },
         { key: 'k', name: 'Keep', url: 'https://keep.google.com', search: '/#search/text={}' },
+        { key: 'hr', name: 'HR Learn', url: 'https://learn.makerpass.com/groups/hrr23/courses', search: false },
       ] },
       { name: "Lurk", commands: [
-        { key: 'i', name: 'Instagram', url: 'https://www.instagram.com', search: false },
+        { key: 'hn', name: 'HackerNews', url: 'https://news.ycombinator.com/', search: false },
+        { key: 'in', name: 'Instagram', url: 'https://www.instagram.com', search: false },
         { key: 'r', name: 'Reddit', url: 'https://www.reddit.com', search: '/search?q={}' },
-        { key: 't', name: 'Twitter', url: 'https://twitter.com', search: '/search?q={}' },
+        // { key: 't', name: 'Twitter', url: 'https://twitter.com', search: '/search?q={}' },
       ] },
       { name: "Listen", commands: [
-        { key: 'h', name: 'Hypem', url: 'http://hypem.com/popular', search: '/search/{}' },
-        { key: 'l', name: 'LineRadio', url: 'https://linerad.io', search: '/#/{}' },
-        { key: 's', name: 'SoundCloud', url: 'https://soundcloud.com/discover', search: '/search?q={}' },
+        // { key: 'h', name: 'Hypem', url: 'http://hypem.com/popular', search: '/search/{}' },
+        // { key: 'l', name: 'LineRadio', url: 'https://linerad.io', search: '/#/{}' },
+        { key: 'gm', name: 'Google Music', url: 'https://play.google.com/music/listen?u=1', search: '#/sr/{}' },
+        { key: 'so', name: 'SoundCloud', url: 'https://soundcloud.com/discover', search: '/search?q={}' },
+        { key: 'sp', name: 'Spotify', url: 'https://play.spotify.com', search: '/search/{}' },
       ] },
       { name: "Watch", commands: [
+        { key: 'a', name: 'ArtisanVideos', url: 'https://www.reddit.com/r/ArtisanVideos', search: '/search?q={}&restrict_sr=on&sort=relevance&t=all' },
+        { key: 'c', name: 'ClimbingVids', url: 'https://www.reddit.com/r/Climbingvids', search: '/search?q={}&restrict_sr=on&sort=relevance&t=all' },
+        { key: 'cr', name: 'Crunchyroll', url: 'http://www.crunchyroll.com/', search: '/search?from=&q={}' },
         { key: 'n', name: 'Netflix', url: 'https://www.netflix.com/browse', search: '/search?q={}' },
-        { key: 'w', name: 'Twitch', url: 'https://www.twitch.tv/directory/following', search: false },
         { key: 'y', name: 'YouTube', url: 'https://youtube.com/feed/subscriptions', search: '/results?search_query={}' },
       ] },
       { name: "Download", commands: [
+        { key: 'd', name: 'DOGnzb', url: 'https://dognzb.cr/browse', search: false },
         { key: 'T', name: 'TPB', url: 'https://thepiratebay.org', search: '/search/{}' },
         { key: 'Y', name: 'YIFY', url: 'https://yts.ag/browse-movies/0/1080p/all/7/latest', search: '/browse-movies/{}/1080p/all/0/rating' },
-        { key: '7', name: '7digital', url: 'https://us.7digital.com', search: '/search?q={}' },
       ] },
     ],
 
@@ -52,7 +60,7 @@
     suggestionsLimit: 4,
 
     // open queries in a new tab.
-    newTab: true,
+    newTab: false,
 
     // the delimiter between the hours and minutes in the clock.
     clockDelimiter: '&nbsp;',
@@ -79,6 +87,7 @@
   }
 
   body {
+    background: url("https://source.unsplash.com/random/1920x1080") no-repeat fixed center;
     position: absolute;
     top: 0;
     left: 0;
@@ -107,6 +116,7 @@
     margin-bottom: 20px;
     font-size: 5rem;
     letter-spacing: 6px;
+    mix-blend-mode: difference;
   }
 
   input,
