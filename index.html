@@ -54,7 +54,7 @@
     instantRedirect: false,
 
     // suggest your most popular queries as you type.
-    suggestions: false,
+    suggestions: true,
 
     // max amount of suggestions to display.
     suggestionsLimit: 4,
@@ -63,7 +63,8 @@
     newTab: false,
 
     // the delimiter between the hours and minutes in the clock.
-    clockDelimiter: '&nbsp;',
+    // clockDelimiter: '&nbsp;',
+    clockDelimiter: '-',
 
     // used for determining when to redirect directly to a url.
     urlRegex: /^(?:(http|https)?:\/\/)?(?:[\w-]+\.)+([a-z]|[A-Z]|[0-9]){2,6}/i,
@@ -116,7 +117,11 @@
     margin-bottom: 20px;
     font-size: 5rem;
     letter-spacing: 6px;
-    mix-blend-mode: difference;
+    /*mix-blend-mode: exclusion;*/
+    /*background-blend-mode: difference;*/
+    background-color: #00d2ff;
+    opacity: .9;
+    border-radius: 3px;
   }
 
   input,
