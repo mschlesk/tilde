@@ -8,7 +8,8 @@
         { key: 'g', name: 'GitHub', url: 'https://github.com/mschlesk', search: '/search?q={}' },
         { key: 'i0', name: 'Inbox 0', url: 'https://inbox.google.com/u/0', search: '/search/{}' },
         { key: 'i1', name: 'Inbox 1', url: 'https://inbox.google.com/u/1', search: '/search/{}' },
-        { key: 'k', name: 'Keep', url: 'https://keep.google.com', search: '/#search/text={}' },
+        { key: 'ca', name: 'Calendar', url: 'https://calendar.google.com/calendar/render', search: false },
+        // { key: 'k', name: 'Keep', url: 'https://keep.google.com', search: '/#search/text={}' },
         { key: 'hr', name: 'HR Learn', url: 'https://learn.makerpass.com/groups/hrr23/courses', search: false },
       ] },
       { name: "Lurk", commands: [
@@ -25,9 +26,10 @@
         { key: 'sp', name: 'Spotify', url: 'https://play.spotify.com', search: '/search/{}' },
       ] },
       { name: "Watch", commands: [
-        { key: 'a', name: 'ArtisanVideos', url: 'https://www.reddit.com/r/ArtisanVideos', search: '/search?q={}&restrict_sr=on&sort=relevance&t=all' },
-        { key: 'c', name: 'ClimbingVids', url: 'https://www.reddit.com/r/Climbingvids', search: '/search?q={}&restrict_sr=on&sort=relevance&t=all' },
-        { key: 'cr', name: 'Crunchyroll', url: 'http://www.crunchyroll.com/', search: '/search?from=&q={}' },
+        { key: 'av', name: 'ArtisanVideos', url: 'https://www.reddit.com/r/ArtisanVideos', search: '/search?q={}&restrict_sr=on&sort=relevance&t=all' },
+        { key: 'cv', name: 'ClimbingVids', url: 'https://www.reddit.com/r/Climbingvids', search: '/search?q={}&restrict_sr=on&sort=relevance&t=all' },
+        { key: 'cr', name: 'Crunchyroll', url: 'http://www.crunchyroll.com', search: '/search?from=&q={}' },
+        { key: 'fu', name: 'Funimation', url: 'https://www.funimation.com', search: '/search/?q={}' },
         { key: 'n', name: 'Netflix', url: 'https://www.netflix.com/browse', search: '/search?q={}' },
         { key: 'y', name: 'YouTube', url: 'https://youtube.com/feed/subscriptions', search: '/results?search_query={}' },
       ] },
@@ -64,7 +66,8 @@
 
     // the delimiter between the hours and minutes in the clock.
     // clockDelimiter: '&nbsp;',
-    clockDelimiter: '-',
+    clockDelimiter: '||',
+    // clockDelimiter: '-',
 
     // used for determining when to redirect directly to a url.
     urlRegex: /^(?:(http|https)?:\/\/)?(?:[\w-]+\.)+([a-z]|[A-Z]|[0-9]){2,6}/i,
